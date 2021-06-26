@@ -1,11 +1,5 @@
 package com.example.countsheep;
 
-/**
- * @author fanxiaoyang
- * date 2021/6/26
- * desc
- */
-
 import android.animation.Animator;
 import android.content.Context;
 import android.graphics.Color;
@@ -26,9 +20,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-
 /**
- * Created by wkp111 on 2017/4/2.
+ * @author fanxiaoyang
+ * date 2021/6/26
+ * desc
  */
 public class RandomLayout extends ViewGroup {
     private final Context mContext;
