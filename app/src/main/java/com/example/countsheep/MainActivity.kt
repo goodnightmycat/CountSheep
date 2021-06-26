@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         randomLayout.setCountListener {
             sheepCount += 1
             if (sheepCount == actualCount) {
-                Toast.makeText(this, "congratulation", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "一共${actualCount}只羊", Toast.LENGTH_LONG).show()
                 frameLayout.postDelayed({ resetView() }, 5000)
             }
         }
