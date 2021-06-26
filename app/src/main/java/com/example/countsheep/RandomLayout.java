@@ -203,7 +203,7 @@ public class RandomLayout extends ViewGroup {
     }
 
     private int getRandomWidth() {
-        return DensityUtil.dip2px(mContext, kotlin.random.Random.Default.nextInt(10, 50));
+        return DensityUtil.dip2px(mContext, kotlin.random.Random.Default.nextInt(15, 50));
     }
 
     @Override

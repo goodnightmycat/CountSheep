@@ -23,14 +23,18 @@ class MainActivity : AppCompatActivity() {
         sheepCount = 0
         frameLayout.removeAllViews()
         val randomLayout = RandomLayout(this)
-        val total = Random.nextInt(50, 150)
+        val total = Random.nextInt(16, 128)
+        var actualCount = total
         randomLayout.initView(total)
         randomLayout.setCountListener {
             sheepCount += 1
-            if (sheepCount == total) {
+            if (sheepCount == actualCount) {
                 Toast.makeText(this, "congratulation", Toast.LENGTH_LONG).show()
                 frameLayout.postDelayed({ resetView() }, 5000)
             }
+        }
+        randomLayout.post {
+            actualCount = randomLayout.childCount
         }
         val layoutParams = FrameLayout.LayoutParams(
             FrameLayout.LayoutParams.MATCH_PARENT,
