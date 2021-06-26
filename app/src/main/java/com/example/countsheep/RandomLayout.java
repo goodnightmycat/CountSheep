@@ -180,6 +180,7 @@ public class RandomLayout extends ViewGroup {
         imageView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+                MediaPlayManager.getInstance().play(mContext, R.raw.mie);
                 YoYo.with(Techniques.RotateOut).duration(1000).onEnd(new YoYo.AnimatorCallback() {
                     @Override
                     public void call(Animator animator) {
@@ -193,7 +194,6 @@ public class RandomLayout extends ViewGroup {
         });
         return imageView;
     }
-
 
     private Random mRandom = new Random();
 
@@ -220,7 +220,6 @@ public class RandomLayout extends ViewGroup {
     public ViewGroup.LayoutParams generateLayoutParams(AttributeSet attrs) {
         return new RandomLayout.LayoutParams(getContext(), attrs);
     }
-
 
     public static class LayoutParams extends MarginLayoutParams {
 
