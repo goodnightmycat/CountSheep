@@ -48,7 +48,7 @@ public class RandomLayout extends ViewGroup {
     public RandomLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         mContext = context;
-        setBackgroundColor(0xffffffff);
+        setBackgroundColor(Color.parseColor("#36710C"));
     }
 
     @Override
